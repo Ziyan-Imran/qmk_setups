@@ -8,8 +8,8 @@ Contains the folders for my qmk setups
 cd ~/qmk_firmware 
 make massdrop/thekey_v2:default 
 ```
-## default is the name of the directory of your specified keymap.c file
-## for us, this is what it would look like
+default is the name of the directory of your specified keymap.c file
+for us, this is what it would look like
 
 `make massdrop/thekey_v2:personal`
 

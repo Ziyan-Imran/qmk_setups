@@ -19,7 +19,7 @@
 // define the layers for the macropad
 #define LY_MED  0
 #define LY_PAT  1
-#define SEL_BT  2
+#define LY_RGB  2
 #define SEL_MSP 3
 #define LY_SPD  4
 #define LY_BR   5
@@ -47,6 +47,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-[LY_MED] =  LAYOUT(mute_gc, KC_MPLY, LT(LY_PAT,KC_MNXT)),
-[LY_PAT] =  LAYOUT(RGB_RMOD, RGB_MOD, KC_TRNS),
+[LY_MED] =  LAYOUT(LT(LY_RGB, KC_MPRV), KC_MPLY, LT(LY_PAT,KC_MNXT)),
+[LY_PAT] =  LAYOUT(mute_gc, RGB_TOG, KC_TRNS),
+[LY_RGB] =  LAYOUT(KC_TRNS, RGB_RMOD, RGB_MOD),
 };

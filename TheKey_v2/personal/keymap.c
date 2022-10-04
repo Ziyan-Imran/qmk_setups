@@ -25,7 +25,8 @@
 #define LY_BR   5
 
 enum my_keycodes {
-    mute_gc = SAFE_RANGE,   
+    mute_gc     = SAFE_RANGE,   
+    mute_disc   = SAFE_RANGE,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -49,5 +50,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [LY_MED] =  LAYOUT(LT(LY_RGB, KC_MPRV), KC_MPLY, LT(LY_PAT,KC_MNXT)),
 [LY_PAT] =  LAYOUT(mute_gc, RGB_TOG, KC_TRNS),
-[LY_RGB] =  LAYOUT(KC_TRNS, RGB_RMOD, RGB_MOD),
+[LY_RGB] =  LAYOUT(KC_TRNS, RGB_HUI, RGB_MOD),
 };

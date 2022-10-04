@@ -22,3 +22,4 @@ for us, this is what it would look like
  make massdrop/thekey_v2:personal:dfu
  ```
 
+Here's the link for the official documentation:(qmk_docs)[https://docs.qmk.fm/#/feature_layers?id=switching-and-toggling-layers]

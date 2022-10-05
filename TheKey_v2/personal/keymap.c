@@ -42,6 +42,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         unregister_code(KC_D); // release the d key
       }
       return false; // Skip all further processing of this key
+    case mute_discord:
+      if (record ->event.pressed) {
+        // when keycord mute_discord is pressed
+        register_code(KC_LCTRL); // press the left control
+        register_code(KC_LSHFT); // press the left shift
+        register_code(KC_M); // press the m key  
+     } else {
+        // when keycode mute_discord is released
+        unregister_code(KC_LCTRL); // release left control
+        unregister_code(KC_LSHFT); // release left shift
+        unregister_code(KC_M); // release m key
+     }
+     return false; // Skip all further processing of this key
     default:
       return true; // Process all other keycodes normally
   }

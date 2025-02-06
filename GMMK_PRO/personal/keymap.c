@@ -282,7 +282,7 @@ void rgb_matrix_indicators_user(void) {
 //  70, led 02   1, ~      7, 1       13, 2       19, 3    24, 4    29, 5       35, 6    40, 7    45, 8       51, 9    57, 0     62, -_     78, (=+)   85, BackSpc   72, Home       71, led 13
 //  73, led 03   2, Tab    8, Q       14, W       20. E    25, R    30, T       36, Y    41, U    46, I       52, O    58, P     63, [{     89, ]}     93, \|        75, PgUp       74, led 14
 //  76, led 04   3, Caps   9, A       15, S       21, D    26, F    31, G       37, H    42, J    47, K       53, L    59, ;:    64, '"                96, Enter     86, PgDn       77, led 15
-//  80, led 05   4, Sh_L   10, Z      16, X       22, C    27, V    32, B       38, N    43, M    48, ,<      54, .<   60, /?               90, Sh_R   94, Up        82, End        81, led 16
+//  80, led 05   4, Sh_L   10, Z      16, X       22, C    27, V    32, B       38, N    43, M    48, ,<      54, .<   60, /?               90, Sh_R   94, Up        82, Del        81, led 16
 //  83, led 06   5, Ct_L   11,Win_L   17, Alt_L                     33, SPACE                     49, Alt_R   55, FN             65, Ct_R   95, Left   97, Down      79, Right      84, led 17
 //  87, led 07                                                                                                                                                                      88, led 18
 //  91, led 08                                                                                                                                                                      92, led 19
@@ -295,14 +295,19 @@ static void set_rgb_caps_leds_on() {
         rgb_matrix_set_color(68, 255, 0, 0);      //Right LED 12
         rgb_matrix_set_color(70, 255, 127, 0);    //Left LED 02
         rgb_matrix_set_color(71, 255, 127, 0);    //Right LED 13
+        rgb_matrix_set_color(72, 255, 0, 0);      //Home key
         rgb_matrix_set_color(73, 255, 255, 0);    //Left LED 03
         rgb_matrix_set_color(74, 255, 255, 0);    //Right LED 14
+        rgb_matrix_set_color(75, 255, 0, 0);      //PGUP Key
         rgb_matrix_set_color(76, 0, 255, 0);      //Left LED 04
         rgb_matrix_set_color(77, 0, 255, 0);      //Right LED 15
+        rgb_matrix_set_color(79, 255, 0, 0);      //right arrow Key
         rgb_matrix_set_color(80, 0, 0, 255);      //Left LED 05
         rgb_matrix_set_color(81, 0, 0, 255);      //Right LED 16
+        rgb_matrix_set_color(82, 255, 0, 0);      //DEL key
         rgb_matrix_set_color(83, 46, 43, 95);     //Left LED 06
         rgb_matrix_set_color(84, 46, 43, 95);     //Right LED 17
+        rgb_matrix_set_color(86, 255, 0, 0);      //PGDN Key
         rgb_matrix_set_color(87, 139, 0, 255);    //Left LED 07
         rgb_matrix_set_color(88, 139, 0, 255);    //Right LED 18
         rgb_matrix_set_color(91, 255, 255, 255);  //Left LED 08
@@ -317,14 +322,19 @@ static void set_rgb_caps_leds_off() {
         rgb_matrix_set_color(68, 0, 0, 0); //Right LED 12
         rgb_matrix_set_color(70, 0, 0, 0); //Left LED 02
         rgb_matrix_set_color(71, 0, 0, 0); //Right LED 13
+        rgb_matrix_set_color(72, 0, 0, 0); //Home Key
         rgb_matrix_set_color(73, 0, 0, 0); //Left LED 03
         rgb_matrix_set_color(74, 0, 0, 0); //Right LED 14
+        rgb_matrix_set_color(75, 0, 0, 0); //PGUP Key
         rgb_matrix_set_color(76, 0, 0, 0); //Left LED 04
         rgb_matrix_set_color(77, 0, 0, 0); //Right LED 15
+        rgb_matrix_set_color(79, 0, 0, 0); //right arrow Key
         rgb_matrix_set_color(80, 0, 0, 0); //Left LED 05
         rgb_matrix_set_color(81, 0, 0, 0); //Right LED 16
+        rgb_matrix_set_color(82, 0, 0, 0); //Delete Key
         rgb_matrix_set_color(83, 0, 0, 0); //Left LED 06
         rgb_matrix_set_color(84, 0, 0, 0); //Right LED 17
+        rgb_matrix_set_color(86, 0, 0, 0); //PGDN Key
         rgb_matrix_set_color(87, 0, 0, 0); //Left LED 07
         rgb_matrix_set_color(88, 0, 0, 0); //Right LED 18
         rgb_matrix_set_color(91, 0, 0, 0); //Left LED 08
